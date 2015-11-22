@@ -1,17 +1,24 @@
-<%-- 
-    Document   : index
-    Created on : Nov 22, 2015, 2:08:32 PM
-    Author     : Chun-Ting Yang
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>My Customers</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <div class="wrap">
+            <%@include file="includes/header.jsp" %>
+            <%@include file="includes/menu.jsp" %>
+            
+            <div class="main">
+                <h1>My Customers</h1>
+                <br>
+                <p><a href="read">View All Customers</a></p>
+                <p><a href="search.jsp">Search Customers</a></p>
+            </div>
+            
+            <div class="footer"><%@include file="includes/footer.jsp" %></div>      
+        </div>
     </body>
 </html>
