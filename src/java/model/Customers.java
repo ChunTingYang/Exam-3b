@@ -1,7 +1,9 @@
+
 package model;
 
+
 public class Customers {
-   
+
     private int custID;
     private String firstName;
     private String lastName;
@@ -12,8 +14,8 @@ public class Customers {
     private String zip;
     private String emailAddr;
     private int age;
-
-    public Customers() {
+    
+        public Customers() {
         this.custID = 0;
         this.firstName = "";
         this.lastName = "";
@@ -25,7 +27,7 @@ public class Customers {
         this.emailAddr = "";
         this.age = 0;
     }
-    
+
     public Customers(int custID, String firstName, String lastName, String addr1, String addr2, String city, String state, String zip, String emailAddr, int age) {
         this.custID = custID;
         this.firstName = firstName;
@@ -123,6 +125,5 @@ public class Customers {
     public String toString() {
         return "Customers{" + "custID=" + custID + ", firstName=" + firstName + ", lastName=" + lastName + ", addr1=" + addr1 + ", addr2=" + addr2 + ", city=" + city + ", state=" + state + ", zip=" + zip + ", emailAddr=" + emailAddr + ", age=" + age + '}';
     }
-    
     
 }
