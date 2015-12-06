@@ -124,6 +124,10 @@ public class ReadQuery {
                 table += customer.getAge();
                 table += "</td>";
                 
+                table += "<td>";
+                table += "<a href=delete?custID=" + customer.getCustID() + "> Delete </a>";
+                table += "</td>";
+                
                 table += "</tr>";
             }
         } catch (SQLException ex) {
