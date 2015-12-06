@@ -123,9 +123,9 @@ public class ReadQuery {
                 table += "<td>";
                 table += customer.getAge();
                 table += "</td>";
-                
+                               
                 table += "<td>";
-                table += "<a href=delete?custID=" + customer.getCustID() + "> Delete </a>";
+                table += "<a href=update?custID=" + customer.getCustID() + "> Update </a>" + "<a href=delete?custID=" + customer.getCustID() + "> Delete </a>";
                 table += "</td>";
                 
                 table += "</tr>";

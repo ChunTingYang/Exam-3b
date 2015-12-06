@@ -1,13 +1,13 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-    <head>
+<head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" type="text/css" href="style.css">
-        <title>My Customers</title>
-    </head>
-    <body>
-        <div class="wrap">
+        <title>Software Exam III Pt.2</title>
+</head>
+<body>
+    <div class="wrap">
             <%@include file="includes/header.jsp" %>
             <%@include file="includes/menu.jsp" %>
             
@@ -18,7 +18,8 @@
                 <p><a href="search.jsp">Search Customers</a></p>
             </div>
             
-            <div class="footer"><%@include file="includes/footer.jsp" %></div>      
-        </div>
-    </body>
+            <div class="footer"><%@include file="includes/footer.jsp" %></div>
+            
+    </div>
+</body>
 </html>

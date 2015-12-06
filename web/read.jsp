@@ -4,7 +4,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" type="text/css" href="style.css">
-        <title>Customers</title>
+        <title>Software Exam III Pt.2</title>
     </head>
     
     <% String table = (String) request.getAttribute("table"); %>
@@ -15,7 +15,7 @@
             <%@include file="includes/menu.jsp" %>
             
             <div class="main">
-                <h1>Customers</h1>
+                <h1>My Customers</h1>
                 <%= table %>
                 <br>
                 <p><a href="add">Add A New Customer</a></p>
