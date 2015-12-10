@@ -50,11 +50,11 @@ public class DeleteQuery {
         try {
             conn= DriverManager.getConnection(url, username, passwd);
         } catch (SQLException ex) {
-            Logger.getLogger(ReadQuery.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DeleteQuery.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     
-    public void deDelete(int custID){
+    public void doDelete(int custID){
         
         try {
             String query = "DELETE FROM customers WHERE custID = ?";
@@ -68,8 +68,5 @@ public class DeleteQuery {
             Logger.getLogger(DeleteQuery.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-
-    public void doDelete(int custID) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
 }

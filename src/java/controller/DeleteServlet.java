@@ -60,7 +60,6 @@ public class DeleteServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
         doPost(request, response);
     }
 
@@ -80,12 +79,13 @@ public class DeleteServlet extends HttpServlet {
         
         DeleteQuery dq = new DeleteQuery();
         
-        dq.doDelete(custID);
+        dq.doDelete (custID);
         
         String url = "/read";
         
         RequestDispatcher dispatcher = request.getRequestDispatcher(url);
         dispatcher.forward(request, response);
+        
     }
 
     /**

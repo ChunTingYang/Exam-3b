@@ -19,7 +19,7 @@
                     <table class="update">
                      <tr>
                         <th>Customer ID:</th>
-                        <td class="right"><input type="text" name="id" value="<%= customer.getCustID() %>" readonly/></td>
+                        <td class="right"><input type="text" name="custID" value="<%= customer.getCustID() %>" readonly/></td>
                     </tr>
                     <tr>
                         <th>First Name:</th>

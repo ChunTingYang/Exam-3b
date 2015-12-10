@@ -28,7 +28,7 @@ public class ReadRecord {
     private Customers customer = new Customers();
     private int custID;
     
-    public ReadRecord(int customerID){
+    public ReadRecord(int custID){
     
     Properties props = new Properties();    
         InputStream instr = getClass().getResourceAsStream("dbConn.properties");
@@ -67,7 +67,7 @@ public class ReadRecord {
     public void doRead() {
     
         try {
-            String query = "SELECT * from customers WHERE custID= ?";
+            String query = "SELECT * from customers WHERE custID = ?";
             
             PreparedStatement ps = conn.prepareStatement(query);
             

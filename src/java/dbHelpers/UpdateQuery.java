@@ -12,11 +12,10 @@ import java.util.logging.Logger;
 import model.Customers;
 
 public class UpdateQuery {
-    
+ 
     private Connection conn;
     
-    public UpdateQuery() {
-
+    public UpdateQuery(){
         Properties props = new Properties();    
         InputStream instr = getClass().getResourceAsStream("dbConn.properties");
         try {
@@ -44,12 +43,13 @@ public class UpdateQuery {
         } catch (SQLException ex) {
             Logger.getLogger(UpdateQuery.class.getName()).log(Level.SEVERE, null, ex);
         }
-}
+        
+    }
     
-    public void doUpdate(Customers customer){
-    
+    public void doUpdate (Customers customer){
+        
         try {
-            String query = "UPDATE customers SET firstName = ?, lastName = ?, addr1 = ?, addr2 = ?, city = ?, state =? zip = ? emailAddr = ?, age = ? WHERE custID = ?";
+            String query = "Update customers set firstname = ?, lastname = ?, Addr1=?, Addr2=?, city=?, state=?, zip=?, emailaddr=?, age=? where custid=?";
             
             PreparedStatement ps = conn.prepareStatement(query);
             
@@ -62,10 +62,13 @@ public class UpdateQuery {
             ps.setString(7, customer.getZip());
             ps.setString(8, customer.getEmailAddr());
             ps.setInt(9, customer.getAge());
+            ps.setInt(10, customer.getCustID());
             
             ps.executeUpdate();
         } catch (SQLException ex) {
             Logger.getLogger(UpdateQuery.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+    
+    
 }

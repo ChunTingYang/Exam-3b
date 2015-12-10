@@ -16,10 +16,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import model.Customers;
 
-/**
- *
- * @author Chun-Ting Yang
- */
+
 @WebServlet(name = "UpdateFormServlet", urlPatterns = {"/update"})
 public class UpdateFormServlet extends HttpServlet {
 
@@ -61,6 +58,7 @@ public class UpdateFormServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
         doPost(request, response);
     }
 
@@ -80,15 +78,15 @@ public class UpdateFormServlet extends HttpServlet {
         
         ReadRecord rr = new ReadRecord(custID);
         
-        rr.doRead(); 
+        rr.doRead();
         Customers customer = rr.getCustomer();
         
         request.setAttribute("customer", customer);
-        
-        String url = "/updateForm.jsp";
+        String url ="/updateForm.jsp";
         
         RequestDispatcher dispatcher = request.getRequestDispatcher(url);
         dispatcher.forward(request, response);
+        
         
     }
 

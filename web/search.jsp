@@ -7,10 +7,10 @@
         <title>Search Customers</title>
     </head>
     <body>
-        <h1>Search Customers by Last Name</h1>
-        <form name="searchForm" action="searchCustomer" method="get">
+        <h1>Search Customers</h1>
+        <form name="searchForm" action="search" method="get">
         <input type="text" name="searchVal" value="" />
         <input type="submit" name="submit" value="Search" />
-        <form/>
+        </form>
     </body>
 </html>

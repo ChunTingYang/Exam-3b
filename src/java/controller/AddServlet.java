@@ -84,7 +84,7 @@ public class AddServlet extends HttpServlet {
         String state = request.getParameter("state");
         String zip = request.getParameter("zip");
         String emailAddr = request.getParameter("emailAddr");
-        int age = Integer.parseInt("age");
+        int age = Integer.parseInt(request.getParameter("age"));
         
         Customers customer = new Customers();
         customer.setFirstName(firstName);
