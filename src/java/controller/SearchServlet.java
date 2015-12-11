@@ -10,15 +10,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-    @WebServlet(name = "SearchServlet", urlPatterns = {"/search"})
+@WebServlet(name = "SearchServlet", urlPatterns = {"/search"})
+public class SearchServlet extends HttpServlet {
 
-    public class SearchServlet extends HttpServlet {
-   
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
@@ -41,23 +39,30 @@ import javax.servlet.http.HttpServletResponse;
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
       
-       
+
         String lastName = request.getParameter("searchVal");
+        String firstName = request.getParameter("searchVal");
+        
         SearchQuery sq = new SearchQuery();
-        sq.doSearch(lastName);
-        String table = sq.getHTMLtable();
+        
+        sq.doSearch(lastName, firstName);
+        String table = sq.getHTMLTable();
+        
+        
         request.setAttribute("table", table);
         String url ="/read.jsp";
         
         RequestDispatcher dispatcher = request.getRequestDispatcher(url);
         dispatcher.forward(request,response);
-
             }
-
+        
+        
+        
+        
     
-    @Override
+@Override
     public String getServletInfo() {
         return "Short description";
-    }
+    }// </editor-fold>
 
 }

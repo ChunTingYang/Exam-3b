@@ -19,6 +19,7 @@ public class SearchQuery {
 
     public SearchQuery() {
 
+    
         Properties props = new Properties();
         InputStream instr = getClass().getResourceAsStream("dbConn.properties");
         try {
@@ -32,6 +33,7 @@ public class SearchQuery {
             Logger.getLogger(SearchQuery.class.getName()).log(Level.SEVERE, null, ex);
         }
 
+ 
         String driver = props.getProperty("driver.name");
         String url = props.getProperty("server.name");
         String username = props.getProperty("user.name");
@@ -49,12 +51,15 @@ public class SearchQuery {
 
     }
 
-    public void doSearch(String lastName) {
+    
+    
+    public void doSearch(String lastName, String firstName) {
         try {
-            String query = "Select * from customers where Upper(lastname) like ? order by custID asc";
+            String query = "Select * from customers where Upper(lastname) like ? or upper(firstname) like ? order by custID asc";
 
             PreparedStatement ps = conn.prepareStatement(query);
             ps.setString(1, "%" + lastName.toUpperCase() + "%");
+             ps.setString(2, "%" + firstName.toUpperCase() + "%");
             this.results = ps.executeQuery();
         } catch (SQLException ex) {
             Logger.getLogger(SearchQuery.class.getName()).log(Level.SEVERE, null, ex);
@@ -62,7 +67,9 @@ public class SearchQuery {
 
     }
 
-    public String getHTMLtable() {
+    
+    
+    public String getHTMLTable() {
 
         String table = "";
 
@@ -117,6 +124,9 @@ public class SearchQuery {
 
             table += "</tr>";
 
+
+            
+            
             while (this.results.next()) {
 
                 Customers customer = new Customers();

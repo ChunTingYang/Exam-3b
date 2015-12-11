@@ -19,7 +19,9 @@
                 <%= table %>
                 <br>
                 <p><a href="add">Add A New Customer</a></p>
-                <p><a href="search.jsp">Search Customers</a></p>
+                <br>
+                <br>              
+                
             </div>  
             <div class="footer"><%@include file="includes/footer.jsp" %></div>         
     </div>

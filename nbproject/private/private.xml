@@ -3,11 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Chun-Ting%20Yang/Documents/NetBeansProjects/CustomersApp/src/java/model/Customers.java</file>
+            <file>file:/C:/Users/Chun-Ting%20Yang/Documents/NetBeansProjects/CustomersApp/web/includes/menu.jsp</file>
+            <file>file:/C:/Users/Chun-Ting%20Yang/Documents/NetBeansProjects/CustomersApp/web/style.css</file>
+            <file>file:/C:/Users/Chun-Ting%20Yang/Documents/NetBeansProjects/CustomersApp/src/java/controller/SearchServlet.java</file>
             <file>file:/C:/Users/Chun-Ting%20Yang/Documents/NetBeansProjects/CustomersApp/src/java/dbHelpers/UpdateQuery.java</file>
-            <file>file:/C:/Users/Chun-Ting%20Yang/Documents/NetBeansProjects/CustomersApp/src/java/controller/UpdateServlet.java</file>
-            <file>file:/C:/Users/Chun-Ting%20Yang/Documents/NetBeansProjects/CustomersApp/src/java/dbHelpers/ReadRecord.java</file>
-            <file>file:/C:/Users/Chun-Ting%20Yang/Documents/NetBeansProjects/CustomersApp/src/java/controller/UpdateFormServlet.java</file>
+            <file>file:/C:/Users/Chun-Ting%20Yang/Documents/NetBeansProjects/CustomersApp/src/java/dbHelpers/SearchQuery.java</file>
+            <file>file:/C:/Users/Chun-Ting%20Yang/Documents/NetBeansProjects/CustomersApp/web/includes/header.jsp</file>
+            <file>file:/C:/Users/Chun-Ting%20Yang/Documents/NetBeansProjects/CustomersApp/web/index.jsp</file>
+            <file>file:/C:/Users/Chun-Ting%20Yang/Documents/NetBeansProjects/CustomersApp/web/add.jsp</file>
+            <file>file:/C:/Users/Chun-Ting%20Yang/Documents/NetBeansProjects/CustomersApp/web/read.jsp</file>
         </group>
     </open-files>
 </project-private>
